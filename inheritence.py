@@ -1,73 +1,73 @@
 # single inheritence
 # ------------------
-# class animal:
-#     def __init__(self,name,color):
-#         self.name = name
-#         self.color = color
-#     def eat(self):
-#         print(self.color,self.name,"is eating")
+class animal:
+    def __init__(self,name,color):
+        self.name = name
+        self.color = color
+    def eat(self):
+        print(self.color,self.name,"is eating")
 
-# class dog(animal):
-#     def bark(self):
-#         print(self.color,self.name,"is barking")
+class dog(animal):
+    def bark(self):
+        print(self.color,self.name,"is barking")
 
-# a1 = animal("ZACK","White")
-# d1 = dog("Rovert","Black")
-# d1.bark()
-# d1.eat()
-# print(isinstance(animal,dog))
+a1 = animal("ZACK","White")
+d1 = dog("Rovert","Black")
+d1.bark()
+d1.eat()
+print(isinstance(animal,dog))
 
 # multiple inheritence
 # --------------------
 
-# class A:
-#     def __init__(self):
-#         print("__init__ of class A")
-#     def mmethod1(self):
-#         print("Method1 of class A")
+class A:
+    def __init__(self):
+        print("__init__ of class A")
+    def mmethod1(self):
+        print("Method1 of class A")
 
-# class B:
-#     def __init__(self):
-#         print("__init__ of class B")
+class B:
+    def __init__(self):
+        print("__init__ of class B")
 
-#     def method2(self):
-#         print("Method2 of class B")
+    def method2(self):
+        print("Method2 of class B")
 
-# class C(A,B):
-#     def __init__(self):
-#         super().__init__()
-#         B.__init__(self)
-#         print("__init__ of class C")
-#     def method3(self):
-#         print("method3 of class C")
+class C(A,B):
+    def __init__(self):
+        super().__init__()
+        B.__init__(self)
+        print("__init__ of class C")
+    def method3(self):
+        print("method3 of class C")
 
 
-# c1 = C()
-# c1.mmethod1()
-# B.method2(c1)
-# A.mmethod1(c1)
+c1 = C()
+c1.mmethod1()
+B.method2(c1)
+A.mmethod1(c1)
 
 # ---------------------------------------------------------
 
 # Variable overriding
 # -------------------
-# class Animal:
-#     def __init__(self,name):
-#         self.name = name
-#         self.color = "White"
-#     def eat(self):
-#         print(self.color,self.name,"is eating")
+class Animal:
+    def __init__(self,name):
+        self.name = name
+        self.color = "White"
+    def eat(self):
+        print(self.color,self.name,"is eating")
 
-# class dog(Animal):
-#     def __init__(self,name,color):
-#         super().__init__(name)
-#         self.color = color
-#     def bark(self):
-#         print(self.color,self.name,"is barking")
+class dog(Animal):
+    def __init__(self,name,color):
+        super().__init__(name)
+        self.color = color
+    def bark(self):
+        print(self.color,self.name,"is barking")
 
-# d1 = dog("Robert","Black")
-# d1.bark()
-# d1.eat()
+d1 = dog("Robert","Black")
+d1.bark()
+d1.eat()
 
 
 
